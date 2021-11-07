@@ -1,24 +1,25 @@
 package _01_nasty_surprise;
 
-import javax.swing.JButton;
-
 public class NastySurpriseRunner {
+public static void main(String[] args) {
+	NastySurprise BoOoO = new NastySurprise();
+BoOoO.run();
 
-	JButton Trick = new JButton();
-	JButton Treat = new JButton();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
