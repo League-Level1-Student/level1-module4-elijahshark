@@ -40,10 +40,11 @@ JFrame frame = new JFrame();
 		images.put(KeyEvent.VK_UP, "right.jpg");
 		// 3. Use a JOptionPane to tell the user the rules: "Press the matching
 		// key when
+		JOptionPane.showMessageDialog(null, "Press the mathing key when");
 		// 'Simon says' otherwise press a different key"
-
+JOptionPane.showMessageDialog(null, "Otherwise press a different key");
 		// 4. Call the showImage method to show an image
-
+showImage();
 	}
 
 	public void keyPressed(KeyEvent e) {
@@ -77,7 +78,7 @@ JFrame frame = new JFrame();
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
-
+frame = new JFrame();
 		// 6. Set the frame to visible
 
 		// 7. Uncomment the following line to add a random image to your frame
