@@ -80,25 +80,31 @@ showImage();
 		// 5. Initialize your frame to a new JFrame()
 frame = new JFrame();
 		// 6. Set the frame to visible
-
+frame.setVisible(true);
 		// 7. Uncomment the following line to add a random image to your frame
-		// frame.add(getNextRandomImage());
+frame.add(getNextRandomImage());
 
 		// 8. Set the name of your frame
-
+frame.setName("crame");
 		// 9. Pack the frame
-
+frame.pack();
 		// 10. Set the defaultCloseOperation of your frame to
 		// JFrame.EXIT_ON_CLOSE
-
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 11. Add a key listener to the frame
-
+frame.addKeyListener(this);
 		// 12. Create a new instance of Random
-
+Random booga = new Random();
 		// 13. Use the Random and the speak method to either say
 		// "Simon says press this key" or "Press this key"
-
-		// 14. Above, set the value of simonSays to true/false appropriately
+simonSays = booga.nextBoolean();
+if(simonSays) {
+	speak("Simons says press this key");
+}
+else {
+speak("Press this key");
+}	
+	// 14. Above, set the value of simonSays to true/false appropriately
 
 	}
 
