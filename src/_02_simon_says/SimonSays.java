@@ -49,9 +49,11 @@ showImage();
 
 	public void keyPressed(KeyEvent e) {
 		// 15. Make a points variable to track the score.
-
+int score;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
-
+if(keyCode = imageIndex) {
+	
+}
 		// 17. Increase the value of score
 
 		// 18. Use the speak method to tell the user they were correct
