@@ -51,8 +51,8 @@ showImage();
 		// 15. Make a points variable to track the score.
 int score;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
-if(keyCode = imageIndex) {
-	
+if(e.getKeyCode() == imageIndex) {
+	int score ++ 1;
 }
 		// 17. Increase the value of score
 
