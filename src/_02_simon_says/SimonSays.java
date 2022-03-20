@@ -35,9 +35,9 @@ JFrame frame = new JFrame();
 		// 2. Add the four images that match keyboard keys like this:
 		// images.put(KeyEvent.VK_UP, "up.jpg");
 		images.put(KeyEvent.VK_UP, "up.jpg");
-		images.put(KeyEvent.VK_UP, "down.jpg");
-		images.put(KeyEvent.VK_UP, "left.jpg");
-		images.put(KeyEvent.VK_UP, "right.jpg");
+		images.put(KeyEvent.VK_DOWN, "down.jpg");
+		images.put(KeyEvent.VK_LEFT, "left.jpg");
+		images.put(KeyEvent.VK_RIGHT, "right.jpg");
 		// 3. Use a JOptionPane to tell the user the rules: "Press the matching
 		// key when
 		JOptionPane.showMessageDialog(null, "Press the mathing key when");
@@ -49,10 +49,11 @@ showImage();
 
 	public void keyPressed(KeyEvent e) {
 		// 15. Make a points variable to track the score.
-int score;
+int score = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
 if(e.getKeyCode() == imageIndex) {
-	int score ++ 1;
+	speak("Correct :)");	
+	score ++;
 }
 		// 17. Increase the value of score
 
@@ -60,22 +61,29 @@ if(e.getKeyCode() == imageIndex) {
 
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..."
-
+if(e.getKeyCode() != imageIndex && !simonSays){
+	speak("Correct 💩");
+score ++;
+}
 		// 20. Increase the value of score
 
 		// 21. Use the speak method to tell the user they were correct
 
 		// 22. Increment tries by 1
-
+tries ++;
 		// 25. If tries is greater than 9 (or however many you want)...
-
+if(tries == 10) {
+	speak(score + "");
+System.exit(0);
+}
 		// 26. Tell the user their score
 
 		// 27. Exit the program
 
 		// 23. Dispose of the frame
-
+frame.dispose();
 		// 24. Call the showImage method to show a new image
+	showImage();
 	}
 
 	private void showImage() {
