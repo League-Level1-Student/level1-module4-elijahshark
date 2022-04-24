@@ -112,7 +112,10 @@ buttonCount++;
 		// If the buttonPressed was the firstButton
 
 			// Call the askQuestion() method
- 
+if(firstButton == buttonPressed) {
+	askQuestion();
+	
+}
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
 
 		// If the buttonPressed was the secondButton
@@ -128,7 +131,7 @@ buttonCount++;
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
 		
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
-		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
+		JOptionPane.showMessageDialog(null, "An 11-letter word for embroidery on canvas, with uniform spacing of stitches in a pattern."0);
 		
 		// Stop the theme music when they have entered their response. Hint: use the sound variable 
 		
