@@ -53,7 +53,7 @@ public class Jeopardy implements ActionListener {
 		// 1. Make the frame show up
 frame.setVisible(true);
 		// 2. Give your frame a title
-frame.setTitle("J");
+frame.setTitle(" ");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
 JPanel Header = createHeader("what happens to the wind after it's done?");
 		// 4. Add the header component to the quizPanel
@@ -113,7 +113,7 @@ buttonCount++;
 
 			// Call the askQuestion() method
 if(firstButton == buttonPressed) {
-	askQuestion();
+	askQuestion("An 11-letter word for embroidery on canvas, with uniform spacing of stitches in a pattern.", "Needlepoint", 1000);
 	
 }
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
@@ -129,12 +129,14 @@ if(firstButton == buttonPressed) {
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
 		
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
-		
+		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
-		JOptionPane.showMessageDialog(null, "An 11-letter word for embroidery on canvas, with uniform spacing of stitches in a pattern."0);
+		JOptionPane.showMessageDialog(null, "");
 		
 		// Stop the theme music when they have entered their response. Hint: use the sound variable 
-		
+		if(askQuestion.answered == true) {
+			playJeopardyTheme();
+	}
 		// If the answer is correct
 
 			// Increase the score by the prizeMoney
@@ -148,7 +150,7 @@ if(firstButton == buttonPressed) {
 			// Pop up a message to tell the user they were wrong and give them the correct answer
 
 		// Call the updateScore() method
-
+updateScore();
 	}
 
 	public static synchronized void playJeopardyTheme()
