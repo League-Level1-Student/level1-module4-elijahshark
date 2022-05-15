@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Chuckle_Clicker implements ActionListener {
@@ -188,8 +189,14 @@ buton.addActionListener(this);
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		if(e.getSource()== button) {
+			JOptionPane.showMessageDialog(null, "Did you hear about the claustrophobic astronaut? He just wanted a bit more space.");
+		}
+		if(e.getSource()== buton) {
+			JOptionPane.showMessageDialog(null, "");
+		}
+		if(e.getSource() == button);
+		if(e.getSource() == buton);
 	}
 
 }
