@@ -21,6 +21,7 @@ JButton buton = new JButton("punchline");
 	frame.setVisible(true);
 button.addActionListener(this);
 buton.addActionListener(this);
+	frame.pack();
 	}
 	
 	
@@ -193,7 +194,7 @@ buton.addActionListener(this);
 			JOptionPane.showMessageDialog(null, "Did you hear about the claustrophobic astronaut? He just wanted a bit more space.");
 		}
 		if(e.getSource()== buton) {
-			JOptionPane.showMessageDialog(null, "");
+			JOptionPane.showMessageDialog(null, "Why did David HasselHoff change his name to The Hoff? It's less of a hassel");
 		}
 		if(e.getSource() == button);
 		if(e.getSource() == buton);
